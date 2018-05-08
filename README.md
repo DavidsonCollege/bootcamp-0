@@ -9,7 +9,6 @@ With this exercise, you'll learn how to navigate in the terminal and use git. Yo
 Your task is to use HTML, CSS, and Javascript to create a box that follows your mouse movements in the browser. The box should transform colors and shape. Add a pretty background too.
 
 ![Boxalicious](/boxalicious.gif)
-Format: ![Alt Text](url)
 
 0. Clone this repository to your local machine. If you don't have git use your terminal to install it.
 1. Change directory in the repo and checkout a branch with your name.
@@ -25,10 +24,16 @@ This is assignment is hard. Don't let that discourage you. There are many ways t
 
 Steps 6 and 7 will be the most difficult. Be patient and use the console in Chrome or Firefox's developers tools to help you troubleshoot your javascript.
 
-Helpful Links & Hints:
+### Helpful Links & Hints:
+
 [Web Console](https://developer.mozilla.org/en-US/docs/Tools/Web_Console)
+
 [Git Basics](https://earthdatascience.org/courses/intro-version-control-git/basic-git-commands/#clone-your-repository-to-your-local-machine)
+
 [CSS Keyframes](https://www.w3schools.com/css/css3_animations.asp)
+
 [Event Listeners](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
+
 [Translations](https://cssreference.io/property/transform/)
+
 [Using Javascript to Update CSS](https://www.w3schools.com/js/js_htmldom_css.asp)
