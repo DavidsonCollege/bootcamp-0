@@ -5,15 +5,31 @@
     <title>Boxalicious</title>
     <style>
     /* Add your CSS here! */
+
+    @keyframes changes {
+      100%  {
+        border-radius: 50%;
+
+      }
+
+
+      from{background-color:purple;}
+      to {background-color:white;}
+
+    }
+
     .boxalicious {
       height: 100px;
       width: 100px;
-      position: fixed;
-      top: 0;
-      left: 0;
       border: solid black 2px;
+      animation: changes 2s 1s infinite alternate;
     }
-    </style>b
+    body{
+        background: linear-gradient(purple, yellow, white);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    </style>
   </head>
   <body>
     <!--
@@ -21,9 +37,21 @@
     <div style="transform: translate(50px, 50px)" class="boxalicious"></div>
     When the mouse moves, how do you tell javascript to add this attribute for you?
     -->
-    <div class="boxalicious"></div>
-  <script defer>
-  /* Add javascript here */
+    <div id="theONE" class="boxalicious"></div>
+ <script defer>
+//document.getElementById("boxalicious");
+
+document.addEventListener("mousemove", function(event) {
+followMe(event);
+});
+
+function followMe(d) {
+    var x = d.clientX;
+    var y = d.clientY;
+    document.getElementById("theONE").style
+    .transform = "translate("+(x-50)+"px,"+(y-50)+"px)";
+
+}
 </script>
 </body>
 </html>
