@@ -4,18 +4,15 @@
     <meta charset="utf-8">
     <title>Boxalicious</title>
     <style>
-    /* Add your CSS here! */
 
+    /* keyframes to handle the color and shape animations */
     @keyframes changes {
       100%  {
         border-radius: 50%;
 
       }
-
-
       from{background-color:purple;}
       to {background-color:white;}
-
     }
 
     .boxalicious {
@@ -32,15 +29,11 @@
     </style>
   </head>
   <body>
-    <!--
-    HINT: You can manually change the location of boxalicious by adding the below attribute to the div.
-    <div style="transform: translate(50px, 50px)" class="boxalicious"></div>
-    When the mouse moves, how do you tell javascript to add this attribute for you?
-    -->
-    <div id="theONE" class="boxalicious"></div>
- <script defer>
-//document.getElementById("boxalicious");
 
+<div id="theONE" class="boxalicious"></div>
+ <script defer>
+
+/* Event Listener for mouse movement then calls a function to update position */
 document.addEventListener("mousemove", function(event) {
 followMe(event);
 });
