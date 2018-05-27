@@ -42,13 +42,13 @@
     -->
   <script defer>
   /* Add javascript here */
-  var ele = document.getElementById("box");
-  ele.addEventListener("mousemove", function(){trans()});
-  function trans(){
-    var e = window.event;
-    var posX = e.clientX;
-    var posY = e.clientY;
-    ele.style.transform = "translate+" + (posX - 50) + "px, " + (posY - 50) + "px)";
+  document.addEventListener("mousemove", trans);
+  function trans() {
+      var d = window.event;
+      var x = d.clientX;
+      var y = d.clientY;
+      var ele = document.getElementById("box").style;
+      ele.transform = "translate("+(x-50)+"px,"+(y-50)+"px)";
   }
   </script>
 </body>
