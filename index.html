@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Boxalicious</title>
     <style>
-    /* Add your CSS here! */
+    body {background: linear-gradient(to right, magenta, orange);}
     .boxalicious {
       height: 100px;
       width: 100px;
@@ -12,8 +12,25 @@
       top: 0;
       left: 0;
       border: solid black 2px;
+      animation:changeColor 6s infinite, changeShape 3s infinite;
+      transition: .025s;
     }
-    </style>b
+    @-webkit-keyframes changeColor {
+      0% {background-color: blue;}
+      25% {background-color: LightSkyBlue;}
+      50% {background-color: SpringGreen;}
+      75% {background-color: LightSkyBlue;}
+      100% {background-color: blue;}
+    }
+    @-webkit-keyframes changeShape {
+      0% {border-radius: 0px ;}
+      25% {border-radius: 25px;}
+      50% {border-radius: 50px ;}
+      75% {border-radius: 25px;}
+      100% {border-radius: 0px;}
+    }
+
+    </style>
   </head>
   <body>
     <!--
@@ -21,9 +38,16 @@
     <div style="transform: translate(50px, 50px)" class="boxalicious"></div>
     When the mouse moves, how do you tell javascript to add this attribute for you?
     -->
-    <div class="boxalicious"></div>
+    <div id=box class="boxalicious"></div>
+
   <script defer>
-  /* Add javascript here */
+
+  var box = document.getElementById("box");
+  document.addEventListener("mousemove", function(){
+    box.style.left = (event.clientX-15) + "px";
+    box.style.top = (event.clientY-15) + "px";
+  });
+
 </script>
 </body>
 </html>
