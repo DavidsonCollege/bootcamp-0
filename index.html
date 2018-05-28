@@ -6,12 +6,6 @@
     <style>
     /* Add your CSS here! */
 
-    @keyframes ani {
-      0% {background-color: aqua;}
-      50% {background-color:aquamarine;}
-      100% {background-color: blue}
-    }
-
     .boxalicious {
       height: 100px;
       width: 100px;
@@ -20,6 +14,12 @@
       /*background-color: green;*/
       animation-name: ani;
       animation-duration: 3s;
+    }
+
+    @keyframes ani {
+      0% {background-color: aqua}
+      50% {background-color:aquamarine}
+      100% {background-color: blue}
     }
 
     body {
@@ -40,16 +40,20 @@
     <!--
     <div style="transform: translate(50px, 50px)" class="boxalicious"></div>
     -->
-  <script defer>
-  /* Add javascript here */
-  document.addEventListener("mousemove", trans);
-  function trans() {
+    <script defer>
+      
+    /* Add javascript here */
+
+    document.addEventListener("mousemove", trans);
+
+    function trans() {
       var d = window.event;
       var x = d.clientX;
       var y = d.clientY;
       var ele = document.getElementById("box").style;
       ele.transform = "translate("+(x-50)+"px,"+(y-50)+"px)";
-  }
-  </script>
-</body>
+    }
+
+    </script>
+  </body>
 </html>
