@@ -3,27 +3,113 @@
   <head>
     <meta charset="utf-8">
     <title>Boxalicious</title>
+
     <style>
     /* Add your CSS here! */
-    .boxalicious {
+    .body {
+  background: linear-gradient(+90deg, purple,crimson, darkorange, khaki,springgreen);}
+
+
+
+    #boxalicious{
       height: 100px;
       width: 100px;
       position: fixed;
       top: 0;
       left: 0;
       border: solid black 2px;
+      background-color: yellow;
+      animation: colorChange 20s infinite alternate ,
+      shapeChange 4s infinite alternate;
     }
-    </style>b
+      /* style="transform: translate(50px, 50px)" class="boxalicious"></div> */
+    /* When the mouse moves, how do you tell javascript to add this attribute for you?
+     --> */
+     @keyframes colorChange {
+  0% {
+    background: white;
+  }
+  /* Adding a step in the middle */
+  12,5% {
+    background: yellow;
+  }
+  25% {
+    background: skyblue;
+  }
+  37,5% {
+    background: turquoise;
+  }
+  50% {
+    background: royalblue;
+  }
+  62,5% {
+    background: gold;
+  }
+  75% {
+    background: crimson;
+  }
+  87,5% {
+    background: purple;
+  }
+  100% {
+    background: midnightblue;
+  }}
+
+  @keyframes shapeChange{
+    0%  {
+    border-radius:0 0 0 0;
+    }
+  25%  {
+    border-radius:0 0 0 50%;
+  }
+  50%  {
+    border-radius: 0 0 50% 50%;
+  }
+  75%  {
+    border-radius:0 50% 50% 50% ;
+  }
+  100% {
+    border-radius:50%;
+  }
+}
+
+
+    </style>
+
   </head>
-  <body>
-    <!--
-    HINT: You can manually change the location of boxalicious by adding the below attribute to the div.
-    <div style="transform: translate(50px, 50px)" class="boxalicious"></div>
-    When the mouse moves, how do you tell javascript to add this attribute for you?
-    -->
-    <div class="boxalicious"></div>
+  <body class = "body">
+
+
+    <!-- HINT: You can manually change the location of boxalicious by adding the below attribute to the div.-->
+    <!-- <div style="transform: translate(50px, 50px)" id="boxalicious"></div> -->
+
+    <!-- When the mouse moves, how do you tell javascript to add this attribute for you?-->
+
+     <div id="boxalicious"
+
+   </div>
   <script defer>
   /* Add javascript here */
+document.addEventListener("mousemove", function(event) {
+moving(event);
+});
+
+function moving(mouse) {
+    var x = mouse.clientX;
+    var y = mouse.clientY;
+    document.getElementById("boxalicious").style
+    .transform =  "translate("+(x-50)+"px,"+(y-50)+"px)";
+
+}
+  //document.getElementById("boxalicious").addEventListener("mousemove",moving);
+  //.EventListener
 </script>
 </body>
 </html>
+
+
+
+<!--
+//@keyframes example {
+from {background-color: yellow;}
+to {background-color: crimson;} */ -->
